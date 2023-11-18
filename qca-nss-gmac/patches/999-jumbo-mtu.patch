@@ -1,0 +1,10 @@
+--- a/ipq806x/nss_gmac_ctrl.c
++++ b/ipq806x/nss_gmac_ctrl.c
+@@ -1242,6 +1242,7 @@
+ 	gmacdev->macid = pdev->id;
+ 	gmacdev->sgmii_pcs_chanid = gmacdev->macid;
+ #endif
++    netdev->max_mtu = NSS_GMAC_JUMBO_MTU;
+ 	gmacdev->phy_mii_type = gmaccfg->phy_mii_type;
+ 	gmacdev->phy_base = gmaccfg->phy_mdio_addr;
+ 	gmacdev->rgmii_delay = gmaccfg->rgmii_delay;
