@@ -232,7 +232,7 @@ static void nss_ifb_setup(struct net_device *dev)
 	dev->priv_destructor = nss_ifb_dev_free;
 
 	dev->min_mtu = 0;
-	dev->max_mtu = 0;
+	dev->max_mtu = 9018 + 8 + 2;
 }
 
 static int nss_ifb_validate(struct nlattr *tb[], struct nlattr *data[],
